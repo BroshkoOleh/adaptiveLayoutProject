@@ -1,0 +1,173 @@
+.selected-work {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (min-width: 1200px) {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+}
+.section-title {
+  font-family: $light-font-family;
+  font-size: 16.736vw;
+  line-height: 92px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  @media (max-width: 352px) {
+    line-height: 55px;
+  }
+  @media (min-width: 550px) and (max-width: 767px) {
+    line-height: 110px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    line-height: 173px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 1200px) and (max-width: 1619px) {
+    font-size: 11vw;
+    line-height: 120px;
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1620px) {
+    font-size: 11vw;
+    line-height: 160px;
+    padding-bottom: 50px;
+  }
+}
+.selected-work-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  @media (min-width: 768px) and (max-width: 1199px) {
+    gap: 30px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 30px;
+  }
+}
+
+.image-item {
+  width: 100%;
+  height: 90vw;
+  overflow: hidden;
+
+  @media (min-width: 1200px) {
+    height: 340px;
+  }
+  @media (min-width: 1410px) {
+    height: 403px;
+  }
+
+  @media (min-width: 1620px) {
+    height: 531px;
+  }
+}
+
+.selected-work-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.add-info--change-place {
+  @media (min-width: 1200px) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+}
+
+// ADDITIONAL INFORMATION
+.add-info {
+  height: 200px;
+  position: relative;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    height: 210px;
+  }
+  @media (min-width: 1200px) {
+    height: 340px;
+  }
+  @media (min-width: 1410px) {
+    height: 403px;
+  }
+  @media (min-width: 1620px) {
+    height: 531px;
+  }
+}
+.add-info__name {
+  margin-bottom: 20px;
+  line-height: 42px;
+  font-family: $bold-font-family;
+  font-size: 35px;
+  font-weight: $font-weight-medium;
+  text-align: left;
+  color: $default-black;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.add-info__title,
+.add-info__year,
+.add-info__btn {
+  padding: 15px 30px 15px 30px;
+  font-family: $medium-font-family;
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+  border-radius: 50px;
+  @media (max-width: 348px) {
+    padding: 15px 20px;
+  }
+}
+
+.add-info__title {
+  display: inline-block;
+  background-color: $default-white;
+  color: $text-color;
+  margin-right: 30px;
+}
+.add-info__year {
+  background-color: $default-white;
+  color: $text-color;
+}
+.add-info__btn {
+  position: absolute;
+  color: $default-white;
+  background-color: $text-color;
+  right: 0;
+  bottom: 0;
+  padding-right: 50px;
+  &::before {
+    content: "";
+    display: block;
+    width: 13.33px;
+    height: 21.41px;
+    background: url(../images/right-arrow.png) no-repeat;
+    position: absolute;
+    background-size: contain;
+    background-position: center center;
+    right: 30px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+
+.logos__btn {
+  display: block;
+  font-family: $medium-font-family;
+  text-align: center;
+  background-color: $default-white;
+  padding: 15px 60px 15px 60px;
+  border-radius: 50px;
+  color: $text-color;
+  font-size: 18px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}

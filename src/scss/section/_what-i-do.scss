@@ -1,0 +1,96 @@
+.what-i-do {
+    display: grid;
+    background: url("/images/what-i-do-bgd.jpg");
+    background-size: contain;
+
+    border-bottom: 1px solid #252525;
+    border-top: 1px solid #252525;
+}
+
+.what-i-do-wrapper {
+    background: #f5f3ea;
+}
+
+.what-i-do__heading {
+    @include h2
+}
+
+.what-i-do-frame {
+    display: flex;
+    margin: 30px 20px 0;
+    padding: 0 0 30px;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #252525;
+}
+
+%what-i-do__h3 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: $default-black;
+}
+
+.what-i-do-frame__heading {
+    @extend %what-i-do__h3;
+    font-family: $medium-font-family;
+    font-weight: $font-weight-bold;
+
+    &--number {
+        @extend %what-i-do__h3;
+        font-family: $light-font-family;
+        font-weight: $font-weight-light;
+    }
+}
+
+.what-i-do-frame__text {
+    font-family: $primary-font-family;
+    font-weight: $font-weight-medium;
+    font-size: 20px;
+    line-height: 140%;
+    color: $default-black;
+}
+
+@media (min-width: 1200px) {
+    .what-i-do {
+        grid-template-columns: repeat(5, 1fr);
+        background-size: 40%;
+    }
+
+    .what-i-do-wrapper {
+        grid-column: 3 / -1;
+    }
+
+    .what-i-do-frame {
+        margin: 40px 70px 0 111px;
+    }
+
+    .what-i-do__heading {
+        font-size: 150px;
+        margin: 90px 63px 120px 111px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .what-i-do-wrapper {
+        margin-top: 991px;
+    }
+
+    .what-i-do__heading {
+        font-size: 150px;
+        margin: 40px 0 90px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .what-i-do-wrapper {
+        margin-top: 478px;
+    }
+
+    .what-i-do__heading {
+        font-size: 80px;
+        margin: 20px 0 50px;
+    }
+
+}

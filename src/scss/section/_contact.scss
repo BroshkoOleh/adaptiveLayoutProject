@@ -1,0 +1,122 @@
+.contact {
+    background: #f5f3ea;
+    padding: 50px 0;
+
+    &__heading {
+        @include h2;
+        padding: 40px 0 40px;
+    }
+
+    &__h3 {
+        font-family: $bold-font-family;
+        font-weight: $font-weight-medium;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $text-color;
+    
+        padding-bottom: 40px;
+    }
+
+    &__text {
+        font-family: $medium-font-family;
+        font-weight: $font-weight-medium;
+        font-size: 30px;
+        text-align: center;
+        color: $text-color;
+    
+        padding-bottom: 40px;
+    }
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 438px;
+    height: 53px;
+    background: #252525;
+
+    &__text {
+        display: flex;
+        align-self: center;
+        gap: 10px;
+
+        font-family: $light-font-family;
+        font-weight: $font-weight-medium;
+        font-size: 18px;
+        text-transform: capitalize;
+        color: $default-white;
+
+        &::after {
+            content: url('/images/socials/arrow1.svg');
+            display: inline-block;
+            width: 33px;
+            height: 18px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact {
+        padding: 100px 0 100px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+
+        &__heading { 
+            font-size: 150px;
+            grid-area: 1 / 1 / 3 / 2;
+        }
+
+        &__h3 {
+            font-size: 64px;
+            text-align: left;
+        }
+
+        &__text {
+            font-size: 34px;
+            text-align: left;
+        }
+    }
+
+    .contact-wrapper {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    .contact-btn {
+        align-self: flex-start;
+        width: 195px;
+    height: 53px;
+    }
+        
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .contact {
+        &__heading { 
+            font-size: 150px;
+        }
+
+        &__h3 {
+            font-size: 64px;
+        }
+
+        &__text {
+            font-size: 34px;
+        }
+
+    }
+
+    .contact-btn {
+        width: 195px;
+        height: 53px;
+    }
+
+}

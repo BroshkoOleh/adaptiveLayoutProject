@@ -1,0 +1,22 @@
+@import "./_reset.scss";
+@import "./variables.scss";
+@import "./_mixin.scss";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@import "./_content-wrapper.scss";
+@import "./section/_header.scss";
+@import "./section/_top.scss";
+@import "./section/_about-me.scss";
+@import "./section/_logos.scss";
+@import "./section/_what-i-do.scss";
+@import "./section/_selected-work.scss";
+@import "./section/_clients.scss";
+@import "./section/_our-team.scss";
+@import "./section/_contact.scss";
+@import "./section/_footer.scss";
+body {
+  background-color: $background-white;
+}

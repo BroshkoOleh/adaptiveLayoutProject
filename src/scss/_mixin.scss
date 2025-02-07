@@ -1,0 +1,8 @@
+@mixin h2 {
+    font-family: $light-font-family;
+    font-weight: $font-weight-light;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $text-color;
+}

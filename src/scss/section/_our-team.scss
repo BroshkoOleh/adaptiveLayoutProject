@@ -1,0 +1,161 @@
+.our-team {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @media (min-width: 1200px) {
+    padding-top: 50px;
+  }
+}
+.team-member {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 90px 40px;
+  }
+}
+.team-member__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.team-member__name {
+  color: $title-color;
+  font-family: $bold-font-family;
+  font-size: 30px;
+  line-height: 37px;
+}
+.team-member__profession {
+  color: $title-color;
+  font-family: $medium-font-family;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.team-member__photo {
+  width: 100%;
+  height: 90vw;
+  overflow: hidden;
+  @media (min-width: 768px) and (max-width: 1199px) {
+    height: 45vw;
+  }
+  @media (min-width: 1200px) {
+    height: 25vw;
+  }
+}
+.team-member__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+}
+.team-member__media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+}
+.team-member__media a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.facebook-link {
+  background: url(../images/socials/facebook_black.svg);
+}
+.twitter-link {
+  background: url(../images/socials/twitter_black.svg);
+}
+.linkedin-link {
+  background: url(../images/socials/linkedin_black.svg);
+}
+.dribble-link {
+  background: url(../images/socials/dribble_black.svg);
+}
+// INVITATION
+.invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  @media (min-width: 768px) {
+    grid-column: span 2;
+    align-items: flex-start;
+  }
+}
+.invitation__title {
+  font-family: $light-font-family;
+  color: $title-color;
+  font-size: 6.45vw;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  @media (min-width: 768px) and (max-width: 1199px) {
+    font-size: 4.45vw;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.5vw;
+  }
+}
+
+.invitation__text {
+  color: $title-color;
+  font-family: $bold-font-family;
+  font-size: 8.4vw;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 15px;
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 6.6vw;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+    font-size: 3.5vw;
+  }
+}
+.invitation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15.67px 57.33px 15.67px 35px;
+  border-radius: 50px;
+  background-color: $text-color;
+  color: $default-white;
+  font-family: $medium-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+.invitation-btn span {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 13.33px;
+    height: 21.41px;
+    background: url(../images/right-arrow.png) no-repeat;
+    position: absolute;
+    background-size: contain;
+    background-position: center center;
+    right: -22px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
