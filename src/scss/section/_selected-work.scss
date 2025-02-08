@@ -137,24 +137,23 @@
   color: $text-color;
 }
 .add-info__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   color: $default-white;
   background-color: $text-color;
   right: 0;
   bottom: 0;
-  padding-right: 50px;
-  &::before {
-    content: "";
-    display: block;
-    width: 13.33px;
-    height: 21.41px;
-    background: url(../images/right-arrow.png) no-repeat;
-    position: absolute;
-    background-size: contain;
-    background-position: center center;
-    right: 30px;
-    bottom: 50%;
-    transform: translateY(50%);
+  cursor: pointer;
+
+  border: none;
+  &::after {
+    content: url("/images/socials/arrow1.svg");
+    display: inline-block;
+    width: 33px;
+    height: 18px;
+    margin-left: 10px;
   }
 }
 
